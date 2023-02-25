@@ -305,12 +305,6 @@
       
       </div>
       </div>
-      
- 
-
-
-
-
 
       <button class="btn-next" @click="prevQuestion">Prev</button>
       <button class="btn-next" @click="nextQuestion">Next</button>
@@ -436,6 +430,29 @@ label[for^="option-"] {
 input[type="radio"]:checked + label {
   font-weight: bold;
   
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: none;
+  }
+  .options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  /* margin: 1.8em; */
+  margin: 1rem auto;
+  }
+  .opt-cont{
+ 
+ display: flex;
+ flex-wrap: wrap;
+
+ width: 100%;
+ 
+
+}
 }
 
 
