@@ -68,7 +68,7 @@
 
     }
     </script>
-    <style>
+    <style scoped>
     .containeri{
     padding: 2.5rem;
         width: 48%;

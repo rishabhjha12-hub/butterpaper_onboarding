@@ -3,8 +3,9 @@ import App from './App.vue'
 import * as Vue from 'vue';
 import * as VueRouter from 'vue-router';
 import firstpage from './components/firstPage.vue'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import lastpage from './components/lastPage.vue'
+import OnboardingScreens from './pages/OnboardingScreens'
 
 const routes = [
   // TODO
@@ -17,7 +18,7 @@ const routes = [
 {
     path: "/onboard",
     name: "onboard",
-    component: HelloWorld,
+    component: OnboardingScreens,
   
 
 },

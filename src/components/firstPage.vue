@@ -69,7 +69,7 @@ methods: {
 };
 </script>
   
-  <style>
+  <style scoped>
   .container1{
   padding: 2.5rem;
   width: 48%;

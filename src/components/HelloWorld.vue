@@ -12,34 +12,19 @@
         <div class="progress-bar">
           <div class="progress" :style="{ width: progress + '%' }"></div>
         </div>
-        <h1 class="font-bold text-2xl text-centre my-1">{{ question }}</h1>
+        <h1 class="font-bold text-2xl text-centre my-2">{{ question }}</h1>
         <h2 class="subPart">{{ keyvalue }}</h2>
         <div class="opt-cont">
           <div class="options" v-for="(option, index) in options" :key="index">
             <div class="card-body">
-           <!-- <input type="checkbox" :id="`option-${index}`" :value="option.value" v-model="selectedOptions"  > -->
-           <!-- <div v-if="questions[currentQuestionIndex].questionType === 'radio'"> -->
+         
             <input  v-if="questions[currentQuestionIndex].questionType === 'radio'" type="radio" :id="`option-${index}`" :value="option.value" :name="option.value" v-model="selectedOption">
-        <!-- </div> -->
-        <!-- <div v-else-if="questions[currentQuestionIndex].questionType === 'checkbox'"> -->
+    
           <input v-else-if="questions[currentQuestionIndex].questionType === 'checkbox'" type="checkbox" :id="`option-${index}`" :value="option.value" v-model="selectedOptions " > 
-        <!-- </div> -->
+     
 
               <label :for="`option-${index}`">{{ option.label }}</label>
-              <!-- <input
-                :type="question.questionType"
-                :id="`question-${index}`"
-                :value="option.value"
-                v-model="question.selectedOption"
-                v-if="question.questionType === 'radio'"
-              />
-              <input
-                :type="question.questionType"
-                :id="`question-${index}`"
-                :value="option.value"
-                v-model="question.selectedOptions"
-                v-else-if="question.questionType === 'checkbox'"
-              /> -->
+           
               
 
               <img
@@ -47,10 +32,10 @@
                 :src="option.imgsrc"
                 class="mx-9"
                 alt="Option image"
-                height="30"
-                width="30"
+                height="45"
+                width="45"
               />
-              <!-- <img v-for="(option, index) in options" :key="index" class="mx-4" src="../assets/logo.png" height="20" width="20" alt="dummy"> -->
+             
             </div>
           </div>
         </div>
@@ -76,7 +61,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 img {
   margin-right: 90%;
   margin-bottom: 20px;
@@ -210,7 +195,7 @@ export default {
             {
               label: "Digital Products",
               value: "dig",
-              imgsrc: require("../assets/left.avif"),
+             
             },
           ],
           selectedOption: null,
