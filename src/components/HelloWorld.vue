@@ -269,8 +269,8 @@ export default {
 
 
 <template>
-  <div class="container rounded-lg">
-    <img src="../assets/butterpaper_logo.png" height="100" width="180" alt="200">
+  <div class="container1 rounded-lg">
+    <img class=logo src="../assets/butterpaper_logo.png" height="100" width="180" alt="200">
     <div v-if="!completed">
       <div class="progress-bar">
         <div class="progress" :style="{ width: progress + '%' }"></div>
@@ -284,7 +284,7 @@ export default {
         
         <label :for="`option-${index}`">{{ option.label }}</label>
 
-        <img v-if="option.imgsrc" :src="option.imgsrc"  class="mx-20" alt="Option image" height="20" width="20">
+        <img v-if="option.imgsrc" :src="option.imgsrc"  class="mx-20" alt="Option image" height="20" width="30">
         <!-- <img v-for="(option, index) in options" :key="index" class="mx-4" src="../assets/logo.png" height="20" width="20" alt="dummy"> -->
         </div>
       </div>
@@ -310,9 +310,9 @@ body{
   display: flex;
   flex-wrap: wrap;
 }
-.container {
+.container1 {
   padding: 3rem;
-  width: 62%;
+  width: 48%;
   height: 70vh;
   margin: 5rem auto;
   border-radius: 4%;
@@ -339,14 +339,14 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 1.5em;
+  margin: 1rem;
 }
 label {
   margin-left: 10px;
 }
 .skip-next{
   position: fixed;
-  right: 20rem;
+  right: 38rem;
   bottom: 15rem;
 
 }
@@ -354,7 +354,7 @@ label {
   
   position: fixed;
    bottom: 14rem;
-  right: 14rem;
+  right: 32rem;
   
   padding: 10px 20px;
   background-color: #7E7D84;
@@ -369,7 +369,7 @@ label {
   
   position: fixed;
    bottom: 14rem;
-   left: 14rem;
+   left: 32rem;
   /* margin: 9%; */
   
   padding: 10px 20px;
@@ -388,10 +388,10 @@ label {
   display: flex;
   align-items: center;
   flex-flow: row;
-  height: 5rem;
+  height: 4rem;
   border: 1px solid rgb(111, 110, 110);
   /* background-color: #007BFF; */
-  width: 25rem;
+  width: 15rem;
 }
 .card-body > div {
   display: flex;
