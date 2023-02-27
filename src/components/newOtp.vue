@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col items-center mt-24">
-    <label class="text-4xl font-medium" for="otp-input">Enter OTP:</label>
+    <h1 class="text-3xl font-bold mb-4 text-center text-gray-800">Almost Done! You’d have received a passcode on your email.</h1>
+    <h3 class="text-2xl font-italic mb-4 text-center">You're almost there, don't you despair. Just give us the passcode, and your custom app will be in the air.</h3>
+    <label class="text-2xl font-medium" for="otp-input">Enter the six digit code</label>
     <div class="flex justify-center mt-8" @keydown="handleKeyDown" @paste="handlePaste">
       <input
         v-for="(digit, index) in digits"
@@ -14,6 +16,7 @@
       />
     </div>
     <button class="mt-8 px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" @click="handleSubmit">Submit</button>
+    <p class="my-2">Didn’t receive the code? <a href="#">Resend</a> .</p>
   </div>
 </template>
 

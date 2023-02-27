@@ -28,7 +28,7 @@
       </div>
       <br>
       <div>
-        <button class="bg-gray-500 cursor-not-allowed flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary " type="submit" @click="goToAboutPage"><span class="mr-2 text-2xl"></span>Complete Setup</button>
+        <button class="bg-gray-500 cursor-not-allowed flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary " type="submit" @click="onsubmt"><span class="mr-2 text-2xl"></span>Complete Setup</button>
           
       </div>
     </div>
@@ -57,7 +57,15 @@
             {codi:'USD' , named:'US Dollar'}
           ]
         }
+      },
+      methods:{
+        onsubmt(){
+            alert("submted")
+        }
+   
       }
+
+
     }
     </script>
     <style>
