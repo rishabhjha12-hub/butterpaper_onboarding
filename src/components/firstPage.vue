@@ -28,7 +28,7 @@
           </div>
         </div> 
         <div class="flex items-center justify-center">
-          <button type="submit" class="bg-gray-500 cursor-not-allowed flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary" @click="goToAboutPage"  >Next</button>
+          <button type="submit" class="bg-gray-500 flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary" @click="goToAboutPage"  >Next</button>
           <!-- <button class="bg-gray-700 flex font-medium items-center mx-auto px-4 py-1 rounded-lg text-sm text-white btn-shadow-primary " type="submit" @click="goToAboutPage"><span class="mr-2 text-2xl"></span>Submit</button> -->
           
         </div>
