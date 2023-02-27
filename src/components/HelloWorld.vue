@@ -298,7 +298,7 @@ export default {
         this.completed = true;
       } else {
         this.currentQuestionIndex++;
-        this.progress += 25;
+        this.progress += 33.33;
       }
     },
     skipQuestion() {
@@ -310,13 +310,13 @@ export default {
         this.completed = true;
       } else {
         this.currentQuestionIndex++;
-        this.progress += 33;
+        this.progress += 33.33;
       }
     },
     prevQuestion() {
       if (this.currentQuestionIndex > 0) {
         this.currentQuestionIndex--;
-        this.progress -= 25;
+        this.progress -= 33.33;
       }
     },
   },
