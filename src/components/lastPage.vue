@@ -1,10 +1,11 @@
 <template>
     <div class="containeri rounded-lg">
       <img src="../assets/butterpaper_logo.png" height="100" width="180" alt="200">
-         <h1 class="font-bold text-2xl text-centre " >Last step! Set up your store details, and you're done!</h1>
-          <h2 class="subPart">Get ready to start selling on Butterpaper, it's gonna be fun
+         <h1 class="font-bold text-2xl text-centre  " >Last step! Set up your store details, and you're done!</h1>
+          <h2 class="subPart my-6">Get ready to start selling on Butterpaper, it's gonna be fun
     Hit 'Complete Setup' and let us handle the rest
     You'll be taken to the admin console, where you'll be at your best!</h2>
+    
         <div class="mb-6">
         <label class="block text-black-700 text-lg font-bold mb-2">What is the name of your store?</label>
         <input type="text" class="bg-white-50 border border-gray-300 text-gray-900 text-l rounded-mg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -27,9 +28,8 @@
       </div>
       <br>
       <div>
-        <button class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">
-        Complete Setup
-      </button>
+        <button class="bg-gray-500 cursor-not-allowed flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary " type="submit" @click="goToAboutPage"><span class="mr-2 text-2xl"></span>Complete Setup</button>
+          
       </div>
     </div>
     </template>
@@ -69,7 +69,7 @@
         border-radius: 4%;
         background-color: #fff;
     }
-       body{ font-family: Noto Sans,sans-serif;
+       /* body{ font-family: Noto Sans,sans-serif;
         background-color: #D6D7DA;
-    }
+    } */
     </style>

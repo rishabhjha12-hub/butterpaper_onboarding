@@ -269,7 +269,8 @@ export default {
 
 
 <template>
-  <div class="container1 rounded-lg">
+  <div class="">
+  <div class="container1 rounded-lg  ">
     <img class=logo src="../assets/butterpaper_logo.png" height="100" width="180" alt="200">
     <div v-if="!completed">
       <div class="progress-bar">
@@ -284,19 +285,22 @@ export default {
         
         <label :for="`option-${index}`">{{ option.label }}</label>
 
-        <img v-if="option.imgsrc" :src="option.imgsrc"  class="mx-20" alt="Option image" height="20" width="30">
+        <img v-if="option.imgsrc" :src="option.imgsrc"  class="mx-7" alt="Option image" height="20" width="30">
         <!-- <img v-for="(option, index) in options" :key="index" class="mx-4" src="../assets/logo.png" height="20" width="20" alt="dummy"> -->
         </div>
       </div>
       </div>
-      <button class="btn-next" @click="prevQuestion">Prev</button>
+      <button  class="bg-gray-500 cursor-not-allowed flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary btn-prev" @click="prevQuestion"><span class="mr-2 text-2xl"></span>Prev</button>
+      <button  class="bg-gray-500 cursor-not-allowed flex font-medium items-center mr-4 px-4 py-2 rounded-lg text-sm text-white btn-shadow-primary btn-next" @click="nextQuestion"><span class="mr-2 text-2xl"></span>Next</button>
+      <!-- <button class="btn-next" @click="prevQuestion">Prev</button> -->
       <button class="skip-next" @click="skipQuestion">Skip</button>
-      <button class="btn-prev" @click="nextQuestion">Next</button>
+      <!-- <button class="btn-prev" @click="nextQuestion">Next</button> -->
     </div>
     <div v-else>
       <newOtp/>
     </div>
   </div>
+</div>
 </template>
 <style>
 img{
@@ -347,43 +351,26 @@ label {
 .skip-next{
   position: fixed;
   right: 38rem;
-  bottom: 15rem;
+  bottom: 14.5rem;
 
-}
-.btn-prev {
-  
-  position: fixed;
-   bottom: 14rem;
-  right: 32rem;
-  
-  padding: 10px 20px;
-  background-color: #7E7D84;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.2s ease;
 }
 .btn-next {
   
   position: fixed;
    bottom: 14rem;
-   left: 32rem;
-  /* margin: 9%; */
+  right: 32rem;
+
   
-  padding: 10px 20px;
-  background-color: #7E7D84;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.2s ease;
 }
-.btn-next:hover {
-  background-color: #147A0F;
+.btn-prev{
+  
+  position: fixed;
+   bottom: 14rem;
+   left: 32rem;
+
+ 
 }
+
 .card-body {
   display: flex;
   align-items: center;
@@ -391,6 +378,7 @@ label {
   height: 4rem;
   border: 1px solid rgb(111, 110, 110);
   /* background-color: #007BFF; */
+  padding: 1rem;
   width: 15rem;
 }
 .card-body > div {
@@ -407,76 +395,9 @@ label[for^="option-"] {
 input[type="radio"]:checked + label {
   font-weight: bold;
 }
-@media only screen and (max-width: 600px) {
-  body {
-    background-image: none;
-  }
-  .options {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  /* margin: 1.8em; */
-  margin: 1rem auto;
-  }
-  .opt-cont{
- display: flex;
- flex-wrap: wrap;
- width: 100%;
-}
 
-.btn-prev {
-  
-  position: relative;
-  padding: 10px 20px;
-  background-color: #7E7D84;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.2s ease;
-}
-.btn-next {
-  
-  position: relative;
-  
-  padding: 10px 20px;
-  background-color: #7E7D84;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.2s ease;
-}
-.btn-next:hover {
-  background-color: #147A0F;
-}
-}
 
-@media only screen and (max-width: 900px) {
-  body {
-    background-image: none;
-  }
-  .options {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  /* margin: 1.8em; */
-  margin: 1rem auto;
-  }
-  .opt-cont{
- 
- display: flex;
- flex-wrap: wrap;
 
- width: 100%;
- 
-
-}
-}
 </style>
 <script>
 import newOtp from './newOtp.vue'

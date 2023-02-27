@@ -39,26 +39,11 @@ export default {
         }
       }
     },
-    handlePaste(event) {
-      // handle paste event by filling in input fields with pasted value
-      const clipboardData = event.clipboardData || window.clipboardData;
-      const pastedData = clipboardData.getData('text');
-      if (/^\d+$/.test(pastedData)) {
-        const digits = pastedData.split('');
-        this.otp.forEach((_, index) => {
-          this.$set(this.otp, index, digits[index] || '');
-        });
-      }
-      event.preventDefault();
-    },
+
     handleSubmit() {
-      // redirect to another component on submit
+     
       this.$router.push('/lastpage');
     },
   },
 };
 </script>
-
-<style scoped>
-
-</style>
