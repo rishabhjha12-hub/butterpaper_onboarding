@@ -31,14 +31,14 @@
         </div> -->
         <div class="mb-6">
         <label class="block text-black-700 text-lg font-bold mb-2">Enter your full name</label>
-        <input type="text" class="bg-white-50 border border-gray-300 text-gray-900 text-l rounded-mg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <input type="text" class="bg-white-50 border border-gray-300 text-gray-900 text-l rounded-mg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
         </div>
         <div class="mb-6">
         <label class="block text-black-700 text-lg font-bold mb-2">Enter your Email</label>
-        <input type="email" class="bg-white-50 border border-gray-300 text-gray-900 text-l rounded-mg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <input type="email" class="bg-white-50 border border-gray-300 text-gray-900 text-l rounded-mg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
         </div>
         <div class="mb-6">
-          <label class="block text-black-700 text-lg font-bold mb-2" for="phone">Phone Number:</label>
+          <label class="block text-black-700 text-lg font-bold mb-2" for="phone" >Phone Number:</label>
           <div class="phone-input flex">
             <div class="relative">
               <select class="bg-white-50 border border-gray-300 text-black-900 text-sm rounded-mg focus:ring-grey-500 focus:border-black-500 block w-full p-2.5 dark:bg-grey-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" id="country" v-model="selectedcountry">
@@ -52,7 +52,8 @@
           </div>
         </div> 
         <div class="flex items-center justify-center">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" @click="goToAboutPage">
+            
             Submit
           </button>
         </div>
@@ -82,6 +83,11 @@ export default {
   
   
 } ,
+methods: {
+  goToAboutPage() {
+    this.$router.push('/onboard')
+  }
+}
 
 
 

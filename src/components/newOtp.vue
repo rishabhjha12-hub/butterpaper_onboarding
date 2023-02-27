@@ -53,7 +53,7 @@ export default {
     },
     handleSubmit() {
       // redirect to another component on submit
-      this.$router.push('/another-component');
+      this.$router.push('/lastpage');
     },
   },
 };
