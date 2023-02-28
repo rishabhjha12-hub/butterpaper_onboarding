@@ -34,7 +34,7 @@
               type="radio"
               :id="`option-${index}`"
               :value="option.value"
-              :name="option.value"
+              :name="option.value" 
               v-model="selectedOption"
             />
            
@@ -76,7 +76,8 @@
       </div>
       <div v-if="step === 'completed'" class="px-2">
        
-       <lastPage/>
+       <!-- <lastPage/> -->
+       <newOtp/>
       </div>
       <div class="flex items-center mt-12 px-2">
         <button
@@ -129,7 +130,8 @@
 <script>
 
 import FirstPageVue from '../components/firstPage.vue';
-import lastPage from '../components/lastPage.vue';
+import newOtp from '../components/newOtp.vue';
+// import lastPage from '../components/lastPage.vue';
 export default {
   name: "OnboardingScreens",
   // components: { Icon },
@@ -284,7 +286,7 @@ export default {
       window.location.href = "/";
     },
   },
-  components: { FirstPageVue, lastPage}
+  components: { FirstPageVue, newOtp}
 };
 </script>
 <style></style>

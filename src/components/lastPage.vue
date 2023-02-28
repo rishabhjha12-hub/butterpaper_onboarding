@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div class="containeri rounded-lg">
       <img src="../assets/butterpaper_logo.png" height="100" width="180" alt="200">
          <h1 class="font-bold text-2xl text-centre  " >Last step! Set up your store details, and you're done!</h1>
@@ -68,7 +68,10 @@
 
     }
     </script>
-    <style scoped>
+    <style >
+    body{
+      background-color: #D6D7DA;
+    }
     .containeri{
     padding: 2.5rem;
         width: 48%;
@@ -80,8 +83,8 @@
        /* body{ font-family: Noto Sans,sans-serif;
         background-color: #D6D7DA;
     } */
-    </style> -->
-    <template>
+    </style>
+    <!-- <template>
       
        <div class="py-4 space-y-2">
           <h1 class="font-medium text-xl text-gray-900">
@@ -291,4 +294,4 @@
   },
   
 };
-  </script>
+  </script> -->
