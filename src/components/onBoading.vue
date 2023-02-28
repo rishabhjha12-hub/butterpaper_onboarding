@@ -1,17 +1,5 @@
 <template>
-  <section
-    class="h-screen bg-gradient-to-b from-[#f4f4f4] to-[#D6D7DA] flex items-center justify-center"
-  >
-
-    <div class="bg-white w-1/2 rounded-lg shadow-custom p-6">
-      <img class="h-12 -mr-2" src="@/assets/butterpaper_logo.png" />
-      <div v-if="step === 'basic-details'" class="px-2">
-       <FirstPageVue/>
-       
-      </div>
-      <div class="px-2" v-if="step === 'onboarding'">
-        
-        <div class="h-2 rounded-full bg-gray-100 w-full overflow-hidden mt-4">
+ <div class="h-2 rounded-full bg-gray-100 w-full overflow-hidden mt-4">
           <div
             class="bg-gradient-to-r from-gray-500 to-gray-700 h-full"
             :style="{ width: progress + '%' }"
@@ -72,75 +60,18 @@
             />
           </div>
         </div>
-        <!-- <HelloWorld/> -->
-      </div>
-      <div v-if="step === 'completed'" class="px-2">
-       
-       <lastPage/>
-      </div>
-      <div class="flex items-center mt-12 px-2">
-        <button
-          v-if="step === 'onboarding'"
-          class="flex items-center text-gray-900"
-          @click="prevQuestion"
-        >
-          <Icon icon="charm:chevron-left" class="text-xl" />
-          Back
-        </button>
-        <button
-          v-if="step === 'onboarding'"
-          class="text-sm text-gray-600 mr-4 ml-auto"
-          @click="skipQuestion"
-        
-        >
-          Skip
-        </button>
-        <!-- :disabled="selectedOption == null" -->
-       
-        <button
-          v-if="step !== 'completed'"
-          class="bg-gray-700 font-medium px-4 pr-2 py-1 rounded-lg text-sm text-white btn-shadow-primary flex items-center"
-          :class="{ 'ml-auto': step === 'basic-details' }"
-          
-          @click="
-            step === 'basic-details' ? (step = 'onboarding') : nextQuestion()
-          "
-        >
-          Next
-          <Icon icon="charm:chevron-right" class="text-xl" />
-        </button>
-        <button
-          v-else
-          class="bg-gray-700 font-medium px-4 pl-2 py-1 rounded-lg text-sm text-white btn-shadow-primary flex items-center ml-auto"
-          @click="go()"
-        >
-          <Icon
-            icon="material-symbols:fitbit-check-small-rounded"
-            class="text-3xl"
-          />
-          Completed
-        </button>
-        
-      </div>
-    
-    </div>
-  </section>
 </template>
 <script>
-
-import FirstPageVue from '../components/firstPage.vue';
-import lastPage from '../components/lastPage.vue';
 export default {
-  name: "OnboardingScreens",
   // components: { Icon },
   data() {
     return {
-      // formData: {
-      //   name: "",
-      //   email: "",
-      //   phone: "",
-      //   selectedOption:""
-      // },
+      formData: {
+        name: "",
+        email: "",
+        phone: "",
+        selectedOption:""
+      },
       step: "basic-details",
       questions: [
         {
@@ -222,7 +153,7 @@ export default {
         { name: "Australia", code: "61" },
         { name: "United Kingdom", code: "44" },
       ],
-      selectedCountryp: "null",
+      selectedCountryp: "India",
     };
   },
   computed: {
@@ -284,7 +215,7 @@ export default {
       window.location.href = "/";
     },
   },
-  components: { FirstPageVue, lastPage}
+ 
 };
+
 </script>
-<style></style>
